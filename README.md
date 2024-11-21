@@ -1,5 +1,5 @@
 # EXP1: 4 Bit Adder functionality verification
-print(data.head())
+
 ## Aim:
 To write a verilog code for 4bit adder and verify the functionality using Test bench.
 
@@ -11,10 +11,15 @@ To write a verilog code for 4bit adder and verify the functionality using Test b
 Functional Simulation: nclaunch Simulator (nclaunch) 
 ## full_adder_code
 module full_adder(A,B,CIN,S,COUT);
+
 input A,B,CIN;
+
 output S,COUT;
+
 assign S=A^B^CIN;
+
 assign COUT=(A&B) | (CIN&(A^B));
+
 endmodule
 
 ## full_add_4bit
