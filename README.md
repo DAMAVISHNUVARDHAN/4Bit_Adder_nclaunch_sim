@@ -10,7 +10,6 @@ To write a verilog code for 4bit adder and verify the functionality using Test b
 ## Tool Required: 
 Functional Simulation: nclaunch Simulator (nclaunch) 
 ## full_adder_code
-
 module full_adder(A,B,CIN,S,COUT);
 input A,B,CIN;
 output S,COUT;
