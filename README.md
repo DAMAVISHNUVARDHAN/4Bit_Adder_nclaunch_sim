@@ -58,6 +58,7 @@ Note : File name should be with HDL Extension
 •	fa_4bit_test.v → Test bench 
 
 ## full_adder_code
+```
 module full_adder(A,B,CIN,S,COUT);
 
 input A,B,CIN;
@@ -69,8 +70,10 @@ assign S=A^B^CIN;
 assign COUT=(A&B) | (CIN&(A^B));
 
 endmodule
+```
 
 ## full_add_4bit
+```
 module fulladd_4bit(A,B,C0,S,C4);
 
 input [3:0] A,B;
@@ -92,8 +95,10 @@ full_adder fa2 (A[2],B[2],C2,S[2],C3);
 full_adder fa3 (A[3],B[3],C3,S[3],C4);
 
 endmodule
+```
 
 ## full_add_4bit_test
+```
 module test_4bit;
 
 reg [3:0] A;
@@ -119,9 +124,9 @@ A=4'b0011;B=4'b0011;C0=1'b0;
 end initial
 
 #50 $finish;
-
-endmodule   
-## Functional Simulation: 
+endmodule
+```   
+### Functional Simulation: 
 
 	Invoke the cadence environment by type the below commands 
 
@@ -132,7 +137,7 @@ endmodule
       (The path of cshrc could vary depending on the installation destination)
       
 	After this you can see the window like below 
-![Screenshot 2024-10-01 214751](https://github.com/user-attachments/assets/ece3e2df-2316-4b5d-b00d-66c45e78a64c)
+![Screenshot 2024-11-25 100733](https://github.com/user-attachments/assets/d08325ca-ad6d-4fa2-805d-008df61c9bb1)
 
 
 ### Fig 3:Invoke the Cadence Environment
@@ -147,9 +152,7 @@ or
 •	linux:/> nclaunch& // On subsequent calls to NCVERILOG 
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
-![Screenshot 2024-10-02 102815](https://github.com/user-attachments/assets/6108ca8d-2a95-4f16-abda-7035f55143a3)
-
-![Screenshot 2024-10-01 221519](https://github.com/user-attachments/assets/6f0abb5e-40ef-4ced-9fde-2894ea1ac01a)
+![Screenshot 2024-11-25 100817](https://github.com/user-attachments/assets/5bddaaee-6143-453b-9683-c15026f94615)
 
 ### Fig 4:Setting Multi-step simulation
 
@@ -169,7 +172,7 @@ or
 
 •	A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
 
-![image](https://github.com/user-attachments/assets/781b297a-11e9-4140-89c5-ee3b0d15bbd4)
+![Screenshot 2024-11-25 101002](https://github.com/user-attachments/assets/3c8bdfa7-bd41-4ef2-84d3-12a8e886c641)
 
 ### Fig 6: Selection of Don’t include any libraries
 
@@ -208,7 +211,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 	Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
 
 	The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
-![Screenshot 2024-10-02 101536](https://github.com/user-attachments/assets/4057d968-7943-4134-a89c-5da247cbbc02)
+![Screenshot 2024-11-25 101219](https://github.com/user-attachments/assets/fc700ab5-6705-4562-9295-300fb39d82be)
 
 
 ## Step 2: Elaboration:– To check the port connections in hierarchical design 
